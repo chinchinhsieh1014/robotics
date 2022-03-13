@@ -1,7 +1,7 @@
 # ROS note
-- a framework for writing robot software.
-🔗 Gate: https://rgate.eecs.qmul.ac.uk 
-🔗 Tutorial: http://wiki.ros.org/ROS/Tutorials#Beginner_Level
+- a framework for writing robot software.<br>
+🔗 Gate: https://rgate.eecs.qmul.ac.uk <br>
+🔗 Tutorial: http://wiki.ros.org/ROS/Tutorials#Beginner_Level<br>
 🔗 https://pythonmachinelearning.pro/
 ---
 
