@@ -2,7 +2,7 @@
 - a framework for writing robot software.
 🔗 Gate: https://rgate.eecs.qmul.ac.uk 
 🔗 Tutorial: http://wiki.ros.org/ROS/Tutorials#Beginner_Level
-
+🔗 https://pythonmachinelearning.pro/
 ---
 
 
