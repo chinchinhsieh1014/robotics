@@ -1,8 +1,28 @@
 # ROS note
-- a framework for writing robot software.<br>
-🔗 Gate: https://rgate.eecs.qmul.ac.uk <br>
-🔗 Tutorial: http://wiki.ros.org/ROS/Tutorials#Beginner_Level<br>
-🔗 https://pythonmachinelearning.pro/
+- a framework for writing robot software.
+🔗 Gate: https://rgate.eecs.qmul.ac.uk 
+🔗 Tutorial: http://wiki.ros.org/ROS/Tutorials#Beginner_Level
+
+- Plumbing
+    - process management
+    - inter-process communication
+    - device drivers
+- Tools
+    - simulation
+    - visualization
+    - GUI
+    - date logging
+- Capabilities
+    - control
+    - planning
+    - perception
+    - mapping
+    - manipulation
+- Ecosystem
+    - package organization
+    - software distribution
+    - documentation
+    - tutorials
 ---
 
 
@@ -10,7 +30,10 @@
 ```
 sudo apt-get install ros-melodic-ros-tutorials
 ```
-
+```
+# Check workspace
+echo $ROS_PACKAGE_PATH
+```
 [Filesystem](http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem)
 [Graph](http://wiki.ros.org/rqt_graph)
 ```
@@ -64,6 +87,7 @@ catkin_make
 
 #### roscore
 -  a service that provides connection information to nodes so that they can transmit messages to one another.
+-  manages the communication between nodes.
 - master
 - rosout(stdout/stderr)
 - parameter server
@@ -85,6 +109,8 @@ rosrun [package_name] [node_name]
 
 ### Topic
 - a label for a specific information shared by ROS nodes.
+- Nodes communicate over topics
+- Nodes can **publish** or **subscribe** to a topic
 ```
 #show the available sub-commands
 rostopic -h
@@ -115,6 +141,7 @@ rostopic hz [topic_name]
 ```
 ### Message
 - a container of information shared by ROS nodes.
+- data structure defining the type of a topic
 
 #### [msg](http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv)
 - simple text files that describe the fields of a ROS message.
