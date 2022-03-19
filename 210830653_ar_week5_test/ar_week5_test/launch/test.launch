@@ -1,4 +1,0 @@
-<launch>
-<node name="talker" pkg="ar_week5_test" type="talker.py"></node>
-<node name="listener" pkg="ar_week5_test" type="listener.py"></node>
-</launch>
