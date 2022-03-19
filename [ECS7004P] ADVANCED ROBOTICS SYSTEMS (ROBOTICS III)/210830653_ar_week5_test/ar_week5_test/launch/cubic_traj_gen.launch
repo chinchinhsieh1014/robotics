@@ -1,0 +1,24 @@
+<launch>
+
+<!-- sender -->
+<node name="points_generator" pkg="ar_week5_test" type="points_generator.py">
+</node>
+
+<!-- receiver -->
+<node name="cubic_traj_planner" pkg="ar_week5_test" type="cubic_traj_planner.py">
+</node>
+
+<!-- service -->
+<node name="compute_cubic_coeffs" pkg="ar_week5_test" type="compute_cubic_coeffs.py">
+</node>
+
+<node name="plot_cubic_traj" pkg="ar_week5_test" type="plot_cubic_traj.py">
+</node>
+
+<node name="rqt_plot_GUI" pkg="rqt_plot" type="rqt_plot">
+</node>
+
+<node name="rqt_graph_GUI" pkg="rqt_graph" type="rqt_graph">
+</node>
+
+</launch>
