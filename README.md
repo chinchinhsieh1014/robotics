@@ -1,5 +1,6 @@
 # ROS note
 - a framework for writing robot software.
+
 🔗 Gate: https://rgate.eecs.qmul.ac.uk 
 🔗 Tutorial: http://wiki.ros.org/ROS/Tutorials#Beginner_Level
 
@@ -321,29 +322,26 @@ sudo chmod +x [launch_file]
 
 ---
 
-### [Moveit](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html)
-
----
-
 ### [Bayesian Networks](http://wiki.ros.org/bayesian_belief_networks)
+- [Bayesian Networks](https://github.com/eBay/bayesian-belief-networks/blob/master/bayesian/examples/bbns/cancer.py)
+```
+sudo apt-get install ros-melodic-bayesian-belief-networks
+```
 - [example code-Kapper](https://gist.github.com/Kappers/c2f30c0948c7a4a86147c698221cb4f7)
+    - [ros_bnn_client.py](https://gist.githubusercontent.com/Kappers/c2f30c0948c7a4a86147c698221cb4f7/raw/56c88bf47e8c26939f5edadf5e62ea9322519e7e/ros_bbn_client.py)
+    - [ros_monty_hall.py](https://gist.githubusercontent.com/Kappers/c2f30c0948c7a4a86147c698221cb4f7/raw/56c88bf47e8c26939f5edadf5e62ea9322519e7e/ros_monty_hall.py)
 - [example code-eBay](https://github.com/eBay/bayesian-belief-networks/blob/master/bayesian/examples/bbns/cancer.py)
 - [The Monty Hall Problem](https://brilliant.org/wiki/monty-hall-problem/)
-
-
-
-
-
-
-
-
-
-
----
-- [Bayesian Networks](https://github.com/eBay/bayesian-belief-networks/blob/master/bayesian/examples/bbns/cancer.py)
 - [Locally Weighted Projected Regression](https://web.inf.ed.ac.uk/slmc)
     - [python example](http://www.rueckstiess.net/research/snippets/show/9bd4b418)
 - [Incremental Linear Regrassion](https://stackoverflow.com/questions/52070293/efficient-online-linear-regression-algorithm-in-python/)
 - Two different Reinforcement Learning packages for ROS
     - http://wiki.ros.org/reinforcement_learning/Tutorials/Reinforcement%20Learning%20Tutorial
     - http://wiki.ros.org/openai_ros
+
+---
+### [rViz](http://wiki.ros.org/rviz)
+
+### [Moveit](https://moveit.ros.org/)
+
+### [tf](http://wiki.ros.org/tf/Tutorials)
