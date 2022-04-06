@@ -1,0 +1,15 @@
+<launch>
+
+<!-- sender -->
+<node name="square_size_generator" pkg="ar_week10_test" type="square_size_generator.py">
+</node>
+
+<!-- receiver -->
+<node name="move" pkg="ar_week10_test" type="move_panda_square.py">
+</node>
+
+<!-- plot -->
+<node name="rqt_plot_GUI" pkg="rqt_plot" type="rqt_plot">
+</node>
+
+</launch>
