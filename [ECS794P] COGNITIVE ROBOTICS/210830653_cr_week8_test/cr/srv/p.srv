@@ -1,0 +1,7 @@
+int64 noise 
+int64 eye_direction
+int64 head_direction
+---
+float64 p_left
+float64 p_toward
+float64 p_right

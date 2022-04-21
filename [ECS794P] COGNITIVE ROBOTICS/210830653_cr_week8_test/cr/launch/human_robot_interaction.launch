@@ -1,0 +1,13 @@
+<launch>
+<node name="generator" pkg="cr" type="generator.py" output="screen">
+</node>
+
+<node name="bayesian" pkg="cr" type="b.py" output="screen">
+</node>
+
+<node name="observer" pkg="cr" type="face.py" output="screen">
+</node>
+
+<node name="rqt_graph_GUI" pkg="rqt_graph" type="rqt_graph">
+</node>
+</launch>
