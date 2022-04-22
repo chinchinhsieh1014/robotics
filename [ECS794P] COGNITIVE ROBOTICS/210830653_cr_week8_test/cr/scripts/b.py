@@ -10,7 +10,7 @@ def p_eye(eye, noise):
     else:
         return 1.0/6.0
 
-def p_n(noise):
+def p_noise(noise):
     return 1.0/2.0
 
 def p_head(head):
@@ -32,15 +32,15 @@ def p_RE(eye,noise,head,RE):
     	table['132'] = 0.33
     	table['133'] = 0.0
     	key = ''
-    	if noise == 1:
+    	if noise == 0:
             key = key+'00'
     	else: #2
             key = key+'1'
-	    if eye == 2:
+	    if eye == 1:
 	        key = key+'1'
-	    elif eye == 3:
+	    elif eye == 2:
 		key = key+'2'
-	    else: #4
+	    elif eye==3:
 		key = key+'3'
         if head == 1:
             key = key+'1'
@@ -65,15 +65,15 @@ def p_RE(eye,noise,head,RE):
     	table['132'] = 0.33
     	table['133'] = 0.33
     	key = ''
-    	if noise == 1:
+    	if noise == 0:
             key = key+'00'
     	else: #2
             key = key+'1'
-	    if eye == 2:
+	    if eye == 1:
 	        key = key+'1'
-	    elif eye == 3:
+	    elif eye == 2:
 		key = key+'2'
-	    else: #4
+	    elif eye==3:
 		key = key+'3'
         if head == 1:
             key = key+'1'
@@ -98,15 +98,15 @@ def p_RE(eye,noise,head,RE):
     	table['132'] = 0.33
     	table['133'] = 0.66
     	key = ''
-    	if noise == 1:
+    	if noise == 0:
             key = key+'00'
     	else: #2
             key = key+'1'
-	    if eye == 2:
+	    if eye == 1:
 	        key = key+'1'
-	    elif eye == 3:
+	    elif eye == 2:
 		key = key+'2'
-	    else: #4
+	    elif eye==3:
 		key = key+'3'
         if head == 1:
             key = key+'1'
@@ -117,19 +117,20 @@ def p_RE(eye,noise,head,RE):
         return table[key]
 
 def ep(req):
-    eye = req.eye_direction
-    noise = req.noise
-    head = req.head_direction
-    bnn = build_bbn(p_eye,p_n,p_head,p_RE,
+    eye = req.eye_direction #1,2,3
+    noise = req.noise #0,1
+    head = req.head_direction #1,2,3
+    bnn = build_bbn(p_noise,p_eye,p_head,p_RE,
                     domains=dict(
-                    noise = [1,2],
-                    eye = [1,2,3,4],
+                    noise = [0,1],
+                    eye = [1,2,3],
                     head = [1,2,3],
                     RE = [1,2,3]))
-
-    r = bnn.query(noise=noise,eye=eye,head=head)    
+    if noise == 0:
+        r = bnn.query(noise=noise,head=head)
+    else:
+	r = bnn.query(noise=noise,eye=eye,head=head)    
     p = {n[1]:v for n,v in r.items() if n[0]=='RE'}
-    print(p)
     return pResponse(p[1],p[2],p[3])
     
 def prediction():

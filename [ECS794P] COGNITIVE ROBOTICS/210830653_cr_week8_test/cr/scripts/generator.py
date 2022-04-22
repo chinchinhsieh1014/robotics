@@ -9,7 +9,7 @@ def generator():
     #publish the topic
     object_pub = rospy.Publisher('info_generated', info, queue_size=10)
     #set the rate
-    rate = rospy.Rate(0.1) #10sec
+    rate = rospy.Rate(0.05) #20sec
     while not rospy.is_shutdown():
         i = info()
         i.noise = random.randint(0,1)
@@ -19,6 +19,7 @@ def generator():
             i.eye_direction = random.randint(1,3)
         i.head_direction = random.randint(1,3)
         #publish the topic 
+        #print("noisy:", i.noise)
         rospy.loginfo(i)
         object_pub.publish(i)
         rate.sleep()
